@@ -52,9 +52,11 @@ public class A_Knapsack {
         int[] array = new int[W];
         for(int i = 0; i < W; i++){
             for(int j = 0; j < gold.length; j++) {
-                if (gold[j] <= i) {
+                if (gold[j] <= i) {// пока размер слитка меньше вместимости рюкзака
                     while (array[i] < i) {
-                        array[i] = Math.max(array[i], array[i] + gold[j]);
+                        array[i] = Math.max(array[i], array[i] + gold[j]);// если до этого в array[i] был меньший элемент,
+                        // то  к нему прибавляется размерность слитка и записывается в результат, и это будет продолжаться
+                        // пока не превзойдет i( размер рюкзака)
                     }
                 }
             }
