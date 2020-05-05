@@ -34,6 +34,7 @@ public class A_VideoRegistrator {
             while (events[i] < final_point)
                 i++;
         }
+        //C*(n log n) + C1*n = O(n log n)
         return result;
     }
 }
